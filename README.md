@@ -106,8 +106,8 @@ Everything lives in `OBS Notes` inside the Streamer.bot folder:
 
 ## Requirements
 
-- Streamer.bot 1.0.x with Twitch connected (the Twitch category picks the list); Kick and YouTube optional
-- OBS Studio 28 or newer, connected in Streamer.bot, on the same PC
+- Streamer.bot 1.0.7 or newer with Twitch connected (the Twitch category picks the list); Kick and YouTube optional
+- OBS Studio 28 or newer (tested with 33), connected in Streamer.bot, on the same PC
 
 ## License
 
