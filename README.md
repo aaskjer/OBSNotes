@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/supported%20platform-Twitch-white" alt="Platform">
+  <img src="https://img.shields.io/badge/supported%20platform-Twitch%2C%20Kick%2C%20YouTube-white" alt="Platforms">
   <img src="https://img.shields.io/badge/tool-streamer.bot-white?color=%230b73ff" alt="streamer.bot">
   <img src="https://img.shields.io/github/license/aaskjer/OBSNotes" alt="License">
   <img src="https://img.shields.io/github/v/release/aaskjer/OBSNotes" alt="Release">
@@ -32,6 +32,10 @@ yesterday's game come back when you play it again.
 | `!zettel` | `!schmierzettel`, `!merkheftl`, `!shownotes` | everyone | Posts the last five notes in chat; `!zettel 3` posts note 3. |
 | `!radier <number>` | `!delnote`, `!deletenote` | Moderators, VIPs | Deletes one note; the ones after it move up. |
 | `!clearnotes` | `!allesradiern` | Moderators, VIPs | Deletes every note of the current game. |
+
+The commands work on Twitch, Kick and YouTube, and the answer goes to the chat the command came from, with an
+emote of that platform: Twitch and Kick global emotes, plain emoji on YouTube. Untick a source in a command to
+leave that platform out. The list always follows the Twitch category; without Twitch every note goes to one list.
 
 Each command has a 5 second cooldown; the broadcaster is never held back. The replies in chat are in German
 (partly Bavarian) or English, see `language` below.
@@ -75,7 +79,7 @@ Set Argument sub-actions in the action **OBS Notes**, under *Settings (Important
 | Argument | Default | |
 |----------|---------|---|
 | `useBot` | `True` | Answers from the bot account; `False` = from the broadcaster account. Without a connected bot account Streamer.bot uses the broadcaster account. |
-| `sendAsMe` | `False` | `True` = answers as a /me message. |
+| `sendAsMe` | `False` | `True` = answers as a /me message (Twitch only; Kick and YouTube have none). |
 | `language` | `DE` | `DE` (German, partly Bavarian) or `EN` (English), for the chat answers and the post-its. |
 
 **Overlay**
@@ -102,7 +106,7 @@ Everything lives in `OBS Notes` inside the Streamer.bot folder:
 
 ## Requirements
 
-- Streamer.bot 1.0.x, Twitch connected (the Twitch category picks the list)
+- Streamer.bot 1.0.x with Twitch connected (the Twitch category picks the list); Kick and YouTube optional
 - OBS Studio 28 or newer, connected in Streamer.bot, on the same PC
 
 ## License
