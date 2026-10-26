@@ -1,0 +1,7 @@
+# Only the documentation, Import-String.md and the release asset are published here.
+# The script, the local toolkit and the built export stay in the working copy;
+# users get the code as the Base64 inside Import-String.md.
+*.cs
+*.sb
+*.bak
+tools/
