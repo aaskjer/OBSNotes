@@ -33,8 +33,8 @@ yesterday's game come back when you play it again.
 | `!radier <number>` | `!delnote`, `!deletenote` | Moderators, VIPs | Deletes one note; the ones after it move up. |
 | `!clearnotes` | `!allesradiern` | Moderators, VIPs | Deletes every note of the current game. |
 
-Each command has a 5 second cooldown; the broadcaster is never held back. The replies in chat are in Bavarian
-German.
+Each command has a 5 second cooldown; the broadcaster is never held back. The replies in chat are in German
+(partly Bavarian) or English, see `language` below.
 
 ---
 
@@ -68,7 +68,17 @@ Running the trigger again refreshes the source, or adds it to the scene that is 
 
 ## ⚙️ Settings
 
-Set Argument sub-actions in the action **OBS Notes**, under *Settings (Important to check!) > Overlay*:
+Set Argument sub-actions in the action **OBS Notes**, under *Settings (Important to check!)*.
+
+**Chat**
+
+| Argument | Default | |
+|----------|---------|---|
+| `useBot` | `True` | Answers from the bot account; `False` = from the broadcaster account. Without a connected bot account Streamer.bot uses the broadcaster account. |
+| `sendAsMe` | `False` | `True` = answers as a /me message. |
+| `language` | `DE` | `DE` (German, partly Bavarian) or `EN` (English), for the chat answers and the post-its. |
+
+**Overlay**
 
 | Argument | Default | |
 |----------|---------|---|
