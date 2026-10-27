@@ -35,7 +35,9 @@ yesterday's game come back when you play it again.
 
 The commands work on Twitch, Kick and YouTube, and the answer goes to the chat the command came from, with an
 emote of that platform: Twitch and Kick global emotes, plain emoji on YouTube. Untick a source in a command to
-leave that platform out. The list always follows the Twitch category; without Twitch every note goes to one list.
+leave that platform out. The list follows the Twitch category. Without Twitch it follows the Kick category, read from
+Kick's public channel page (the live stream's category, offline the latest one); without either, every note goes to
+one list.
 
 Each command has a 5 second cooldown; the broadcaster is never held back. The replies in chat are in German
 or English, see `language` below.
@@ -106,7 +108,7 @@ Everything lives in `OBS Notes` inside the Streamer.bot folder:
 
 ## Requirements
 
-- Streamer.bot 1.0.7 or newer with Twitch connected (the Twitch category picks the list); Kick and YouTube optional
+- Streamer.bot 1.0.7 or newer with Twitch or Kick connected (its category picks the list, Twitch first); YouTube optional
 - OBS Studio 28 or newer (tested with 33), connected in Streamer.bot, on the same PC
 
 ## License
