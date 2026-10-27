@@ -70,6 +70,9 @@ A local HTML page that OBS shows as a browser source and that follows the notes 
 The Test trigger's variable `AddOBSOverlayTo` names the OBS connection: `0` is the first one in Streamer.bot.
 Running the trigger again refreshes the source, or adds it to the scene that is showing now.
 
+Updates keep the post-its in OBS: the first command after an import looks in every connected OBS for a browser
+source that still shows the page of an older version, points it to the current page and says so in the log.
+
 ---
 
 ## ⚙️ Settings
