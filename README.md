@@ -50,6 +50,7 @@ A local HTML page that OBS shows as a browser source and that follows the notes 
 
 - One post-it per note, its text as large as the post-it allows, so `4711` stays readable even when the source
   is scaled down to a corner of the screen.
+- Every post-it leans its own way and keeps its angle, also when OBS reloads the page.
 - Six post-its fit; when there are more, the oldest make room and a line counts the ones that no longer fit.
 - The game name sits on the first post-it, next to its number.
 - Without notes, or after a while without commands, nothing is shown at all.
