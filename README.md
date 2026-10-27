@@ -28,17 +28,17 @@ yesterday's game come back when you play it again.
 
 | Command | Also | Who | What it does |
 |---------|------|-----|--------------|
-| `!note <text>` | `!notiz`, `!postit`, `!aufschreim`, `!merkn` | everyone | Saves a note and answers with its number. |
-| `!zettel` | `!schmierzettel`, `!merkheftl`, `!shownotes` | everyone | Posts the last five notes in chat; `!zettel 3` posts note 3. |
+| `!note <text>` | `!notiz`, `!postit`, `!aufschreiben`, `!merken` | everyone | Saves a note and answers with its number. |
+| `!zettel` | `!schmierzettel`, `!merkheft`, `!shownotes` | everyone | Posts the last five notes in chat; `!zettel 3` posts note 3. |
 | `!radier <number>` | `!delnote`, `!deletenote` | Moderators, VIPs | Deletes one note; the ones after it move up. |
-| `!clearnotes` | `!allesradiern` | Moderators, VIPs | Deletes every note of the current game. |
+| `!clearnotes` | `!allesradieren` | Moderators, VIPs | Deletes every note of the current game. |
 
 The commands work on Twitch, Kick and YouTube, and the answer goes to the chat the command came from, with an
 emote of that platform: Twitch and Kick global emotes, plain emoji on YouTube. Untick a source in a command to
 leave that platform out. The list always follows the Twitch category; without Twitch every note goes to one list.
 
 Each command has a 5 second cooldown; the broadcaster is never held back. The replies in chat are in German
-(partly Bavarian) or English, see `language` below.
+or English, see `language` below.
 
 ---
 
@@ -80,7 +80,7 @@ Set Argument sub-actions in the action **OBS Notes**, under *Settings (Important
 |----------|---------|---|
 | `useBot` | `True` | Answers from the bot account; `False` = from the broadcaster account. Without a connected bot account Streamer.bot uses the broadcaster account. |
 | `sendAsMe` | `False` | `True` = answers as a /me message (Twitch only; Kick and YouTube have none). |
-| `language` | `DE` | `DE` (German, partly Bavarian) or `EN` (English), for the chat answers and the post-its. |
+| `language` | `DE` | `DE` (German) or `EN` (English), for the chat answers and the post-its. |
 
 **Overlay**
 
