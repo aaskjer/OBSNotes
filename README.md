@@ -1,7 +1,7 @@
 <h1 align="center">OBS Notes</h1>
 
 <p align="center">
-  <b>Can't remember the code of the padlock? Your chat can add a post-it in OBS.</b><br>
+  <b>Can't remember the code of the combination lock? Your chat can add a post-it in OBS.</b><br>
   Short notes from chat, one list per game, shown on stream as post-its.
 </p>
 
