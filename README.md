@@ -67,7 +67,8 @@ A local HTML page that OBS shows as a browser source and that follows the notes 
 3. Connect OBS in Streamer.bot (*Stream Apps > OBS*). OBS has to run on the same PC, because the browser source
    reads a local file.
 4. In the action **OBS Notes**, right-click the trigger **Test** > *Test Trigger*. It adds the browser source
-   **OBS Notes** (600 x 800) to the scene OBS is showing. Move and scale it wherever you like.
+   **OBS Notes** (600 x 800, or 900 x 560 with `layout` set to `horizontal`) to the scene OBS is showing. Move and
+   scale it wherever you like.
 
 The Test trigger's variable `AddOBSOverlayTo` names the OBS connection: `0` is the first one in Streamer.bot.
 Running the trigger again refreshes the source, or adds it to the scene that is showing now.
@@ -96,6 +97,7 @@ Set Argument sub-actions in the action **OBS Notes**, under *Settings (Important
 | `hideAfterMinutes` | `10` | Minutes without any command until the post-its fade out. The next command brings them back. `0` = always visible. |
 | `colorfulNotes` | `True` | `False` = black text on white post-its. |
 | `showGameName` | `True` | The game name on the first post-it. |
+| `layout` | `vertical` | `vertical` = two post-its side by side in three rows (600 x 800), `horizontal` = three side by side in two rows (900 x 560). The browser source in OBS takes the new size with the next command. |
 
 Changes reach OBS with the next command or Test trigger.
 
