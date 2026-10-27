@@ -50,10 +50,11 @@ A local HTML page that OBS shows as a browser source and that follows the notes 
 
 - One post-it per note, its text as large as the post-it allows, so `4711` stays readable even when the source
   is scaled down to a corner of the screen.
-- The post-its hang like real ones: at one of six angles or straight, never quite like the one before, and each
-  keeps its angle when OBS reloads the page.
-- Six post-its fit; when there are more, the oldest make room and a line counts the ones that no longer fit.
-- The game name sits on the first post-it, next to its number.
+- The post-its hang like real ones: each at one of six angles or straight, never quite like the one before it or
+  the one it is stuck over, and each keeps its angle when OBS reloads the page.
+- Six post-its fit side by side. The seventh is stuck over the first, the eighth over the second, and so on, so the
+  older ones peek out underneath instead of disappearing.
+- The game name sits on the top post-it of the first pile, next to its number.
 - Without notes, or after a while without commands, nothing is shown at all.
 
 ---
@@ -96,7 +97,7 @@ Set Argument sub-actions in the action **OBS Notes**, under *Settings (Important
 |----------|---------|---|
 | `hideAfterMinutes` | `10` | Minutes without any command until the post-its fade out. The next command brings them back. `0` = always visible. |
 | `colorfulNotes` | `True` | `False` = black text on white post-its. |
-| `showGameName` | `True` | The game name on the first post-it. |
+| `showGameName` | `True` | The game name on the top left post-it. |
 | `layout` | `vertical` | `vertical` = two post-its side by side in three rows (600 x 800), `horizontal` = three side by side in two rows (900 x 560). The browser source in OBS takes the new size with the next command. |
 
 Changes reach OBS with the next command or Test trigger.
