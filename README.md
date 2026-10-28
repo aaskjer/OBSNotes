@@ -22,8 +22,7 @@
 
 ## 📝 How It Works
 
-A safe code, a quest item, the name of an NPC: viewers write it down with a chat command and it sticks on
-stream until somebody wipes it off. Every game (the Twitch category) keeps its own list, so the notes from
+Viewers write it down with a chat command and it sticks on stream until somebody wipes it off. Every game (the Twitch/Kick category) keeps its own list, so the notes from
 yesterday's game come back when you play it again.
 
 | Command | Also | Who | What it does |
@@ -55,7 +54,7 @@ A local HTML page that OBS shows as a browser source and that follows the notes 
 - Six post-its fit side by side. The seventh is stuck over the first, the eighth over the second, and so on, so the
   older ones peek out underneath instead of disappearing.
 - The game name sits on the top post-it of the first pile, next to its number.
-- Without notes, or after a while without commands, nothing is shown at all.
+- (Optional) Without notes, or after a while without commands, nothing is shown at all.
 
 ---
 
