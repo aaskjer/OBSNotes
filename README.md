@@ -39,7 +39,7 @@ Kick's public channel page (the live stream's category, offline the latest one);
 one list.
 
 Each command has a 5 second cooldown; the broadcaster is never held back. The replies in chat are in German
-or English, see `language` below.
+or English, see `language` under [Settings](#-settings).
 
 ---
 
@@ -57,6 +57,8 @@ A local HTML page that OBS shows as a browser source and that follows the notes 
 - (Optional) Without notes, or after a while without commands, nothing is shown at all.
 
 ---
+
+<!-- tab: Setup -->
 
 ## 🚀 Setup
 
@@ -77,6 +79,8 @@ Updates keep the post-its in OBS: the first command after an import looks in eve
 source that still shows the page of an older version, points it to the current page and says so in the log.
 
 ---
+
+<!-- tab: Settings -->
 
 ## ⚙️ Settings
 
@@ -113,10 +117,14 @@ Everything lives in `OBS Notes` inside the Streamer.bot folder:
 
 ---
 
+<!-- tab: Setup -->
+
 ## Requirements
 
 - Streamer.bot 1.0.7 or newer with Twitch or Kick connected (its category picks the list, Twitch first); YouTube optional
 - OBS Studio 28 or newer (tested with 33), connected in Streamer.bot, on the same PC
+
+<!-- tab: Overview -->
 
 ## License
 
