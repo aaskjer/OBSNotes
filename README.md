@@ -6,11 +6,18 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/supported%20platform-Twitch%2C%20Kick%2C%20YouTube-white" alt="Platforms">
-  <img src="https://img.shields.io/badge/tool-streamer.bot-white?color=%230b73ff" alt="streamer.bot">
+  <img src="https://img.shields.io/badge/platforms-Twitch%20%7C%20YouTube%20%7C%20Kick-9146FF" alt="Platforms">
+  <img src="https://img.shields.io/badge/tool-streamer.bot-0b73ff" alt="Streamer.bot">
   <img src="https://img.shields.io/github/license/aaskjer/OBSNotes" alt="License">
   <img src="https://img.shields.io/github/v/release/aaskjer/OBSNotes" alt="Release">
   <img src="https://img.shields.io/github/downloads/aaskjer/OBSNotes/total" alt="Downloads">
+</p>
+
+<p align="center">
+  <a href="https://github.com/aaskjer/OBSNotes/releases"><b>Download</b></a> &nbsp;·&nbsp;
+  <a href="Setup-Guide.md"><b>Setup Guide</b></a> &nbsp;·&nbsp;
+  <a href="Import-String.md"><b>Import String</b></a> &nbsp;·&nbsp;
+  <a href="CHANGELOG.md"><b>Changelog</b></a>
 </p>
 
 <p align="center">
@@ -20,112 +27,32 @@
 
 ---
 
-## 📝 How It Works
+## 📖 Overview
 
-Viewers write it down with a chat command and it sticks on stream until somebody wipes it off. Every game (the Twitch/Kick category) keeps its own list, so the notes from
-yesterday's game come back when you play it again.
+OBS Notes is a chat tool for Streamer.bot. Viewers write something down with `!note`, and it sticks on
+stream until somebody wipes it off. Every game keeps its own list, so yesterday's notes come back when you
+play that game again.
 
-| Command | Also | Who | What it does |
-|---------|------|-----|--------------|
-| `!note <text>` | `!notiz`, `!postit`, `!aufschreiben`, `!merken` | everyone | Saves a note and answers with its number. |
-| `!zettel` | `!schmierzettel`, `!merkheft`, `!shownotes` | everyone | Posts the last five notes in chat; `!zettel 3` posts note 3. |
-| `!radier <number>` | `!delnote`, `!deletenote` | Moderators, VIPs | Deletes one note; the ones after it move up. |
-| `!clearnotes` | `!allesradieren` | Moderators, VIPs | Deletes every note of the current game. |
+## ✨ Highlights
 
-The commands work on Twitch, Kick and YouTube, and the answer goes to the chat the command came from, with an
-emote of that platform: Twitch and Kick global emotes, plain emoji on YouTube. Untick a source in a command to
-leave that platform out. The list follows the Twitch category. Without Twitch it follows the Kick category, read from
-Kick's public channel page (the live stream's category, offline the latest one); without either, every note goes to
-one list.
-
-Each command has a 5 second cooldown; the broadcaster is never held back. The replies in chat are in German
-or English, see `language` under [Settings](#-settings).
-
----
-
-## 📺 On Stream
-
-A local HTML page that OBS shows as a browser source and that follows the notes within two seconds.
-
-- One post-it per note, its text as large as the post-it allows, so `4711` stays readable even when the source
-  is scaled down to a corner of the screen.
-- The post-its hang like real ones: each at one of six angles or straight, never quite like the one before it or
-  the one it is stuck over, and each keeps its angle when OBS reloads the page.
-- Six post-its fit side by side. The seventh is stuck over the first, the eighth over the second, and so on, so the
-  older ones peek out underneath instead of disappearing.
-- The game name sits on the top post-it of the first pile, next to its number.
-- (Optional) Without notes, or after a while without commands, nothing is shown at all.
+- 🎮 **One list per game.** The list follows the Twitch category, or the Kick category when Twitch is not
+  connected. Without either, all notes share one list.
+- 🔍 **Readable at any size.** Each note's text grows as large as its post-it allows, so `4711` stays legible
+  even when the source is scaled down to a corner of the screen.
+- 📝 **Post-its that hang like real ones.** Each sits at one of six angles or straight, never quite like the
+  one before it, and keeps its angle when OBS reloads the page.
+- 🗂️ **Piles instead of overflow.** Six post-its fit side by side. The seventh sticks over the first, so older
+  notes peek out underneath instead of disappearing.
+- 💬 **Twitch, Kick and YouTube.** Replies go to the chat the command came from, with an emote of that
+  platform, in German or English.
+- 💾 **Nothing lost by mistake.** A backup file per game keeps every note ever added, one per line.
+- 🔄 **Updates without touching OBS.** After an import, the first command points browser sources that still
+  show an older page to the current one.
 
 ---
 
-<!-- tab: Setup -->
+## Credits
 
-## 🚀 Setup
-
-1. Import [Import-String.md](Import-String.md) in Streamer.bot (*Import*, paste the string), or drop
-   `OBS-Notes.sb` from the [latest release](https://github.com/aaskjer/OBSNotes/releases/latest) onto the
-   import window.
-2. Turn on the four commands in the group **OBS Notes** (*Commands* tab). They are imported switched off.
-3. Connect OBS in Streamer.bot (*Stream Apps > OBS*). OBS has to run on the same PC, because the browser source
-   reads a local file.
-4. In the action **OBS Notes**, right-click the trigger **Test** > *Test Trigger*. It adds the browser source
-   **OBS Notes** (600 x 800, or 900 x 560 with `layout` set to `horizontal`) to the scene OBS is showing. Move and
-   scale it wherever you like.
-
-The Test trigger's variable `AddOBSOverlayTo` names the OBS connection: `0` is the first one in Streamer.bot.
-Running the trigger again refreshes the source, or adds it to the scene that is showing now.
-
-Updates keep the post-its in OBS: the first command after an import looks in every connected OBS for a browser
-source that still shows the page of an older version, points it to the current page and says so in the log.
-
----
-
-<!-- tab: Settings -->
-
-## ⚙️ Settings
-
-Set Argument sub-actions in the action **OBS Notes**, under *Settings (Important to check!)*.
-
-**Chat**
-
-| Argument | Default | |
-|----------|---------|---|
-| `useBot` | `True` | Answers from the bot account; `False` = from the broadcaster account. Without a connected bot account Streamer.bot uses the broadcaster account. |
-| `sendAsMe` | `False` | `True` = answers as a /me message (Twitch only; Kick and YouTube have none). |
-| `language` | `DE` | `DE` (German) or `EN` (English), for the chat answers and the post-its. |
-
-**Overlay**
-
-| Argument | Default | |
-|----------|---------|---|
-| `hideAfterMinutes` | `10` | Minutes without any command until the post-its fade out. The next command brings them back. `0` = always visible. |
-| `colorfulNotes` | `True` | `False` = black text on white post-its. |
-| `showGameName` | `True` | The game name on the top left post-it. |
-| `layout` | `vertical` | `vertical` = two post-its side by side in three rows (600 x 800), `horizontal` = three side by side in two rows (900 x 560). The browser source in OBS takes the new size with the next command. |
-
-Changes reach OBS with the next command or Test trigger.
-
----
-
-## 📁 Files
-
-Everything lives in `OBS Notes` inside the Streamer.bot folder:
-
-- `<Game>-Notes.json`: the notes of one game.
-- `<Game>-Notes.json.bak`: every note ever added to that game, one per line, in case one was wiped by mistake.
-- `Overlay\notes_overlay.html` and `notes_state.json`: the page OBS shows and what it shows.
-
----
-
-<!-- tab: Setup -->
-
-## Requirements
-
-- Streamer.bot 1.0.7 or newer with Twitch or Kick connected (its category picks the list, Twitch first); YouTube optional
-- OBS Studio 28 or newer (tested with 33), connected in Streamer.bot, on the same PC
-
-<!-- tab: Overview -->
-
-## License
-
-[MIT](LICENSE)
+- **Author:** [aaskjer on Twitch](https://twitch.tv/aaskjer) · [aaskjer.github.io](https://aaskjer.github.io/)
+- **Built for:** [Streamer.bot](https://streamer.bot) by [nate1280](https://www.patreon.com/c/nate1280/home)
+- **Thanks:** YOU ♡
