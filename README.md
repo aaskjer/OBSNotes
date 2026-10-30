@@ -41,7 +41,7 @@ play that game again.
   even when the source is scaled down to a corner of the screen.
 - 📝 **Post-its that hang like real ones.** Each sits at one of six angles or straight, never quite like the
   one before it, and keeps its angle when OBS reloads the page.
-- 🗂️ **Piles instead of overflow.** Six post-its fit side by side. The seventh sticks over the first, so older
+- 🗂️ **Create Piles.** Six post-its fit side by side. The seventh sticks over the first, so older
   notes peek out underneath instead of disappearing.
 - 💬 **Twitch, Kick and YouTube.** Replies go to the chat the command came from, with an emote of that
   platform, in German or English.
