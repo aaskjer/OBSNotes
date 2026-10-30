@@ -16,6 +16,7 @@
 <p align="center">
   <a href="https://github.com/aaskjer/OBSNotes/releases"><b>Download</b></a> &nbsp;·&nbsp;
   <a href="Setup-Guide.md"><b>Setup Guide</b></a> &nbsp;·&nbsp;
+  <a href="FAQ.md"><b>FAQ</b></a> &nbsp;·&nbsp;
   <a href="Import-String.md"><b>Import String</b></a> &nbsp;·&nbsp;
   <a href="CHANGELOG.md"><b>Changelog</b></a>
 </p>
