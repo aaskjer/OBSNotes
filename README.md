@@ -42,6 +42,10 @@ LunaLurks: !shownotes 3
 YourBot: [3] "1 1 2 3 . . . 21" - written down by @NoScopeNick on [2026-10-27 / 20:18:11]
 ```
 
+<p align="center">
+  <img src="Assets/screenshots/notes-dark.png" alt="The Notes page of the settings window: the notes of one game, each with its number, text, author and time" width="460">
+</p>
+
 ## ✨ Highlights
 
 - 🎮 **One list per game.** The list follows the Twitch category, or the Kick category when Twitch is not
@@ -56,6 +60,10 @@ YourBot: [3] "1 1 2 3 . . . 21" - written down by @NoScopeNick on [2026-10-27 / 
   underneath instead of disappearing.
 - 💬 **Twitch, Kick and YouTube.** Replies go to the chat the command came from, with an emote of that
   platform, in German or English.
+- 🪟 **Settings in a window.** Layout, colours, the fade-out and the chat language, and a button that puts the
+  post-its into OBS.
+- ✏️ **Fix a note without chat.** The window lists every note of every game, to correct or delete, while chat keeps
+  writing.
 - 💾 **Nothing lost by mistake.** A backup file per game keeps every note ever added, one per line.
 - 🔄 **Updates without touching OBS.** After an import, the first command points browser sources that still
   show an older page to the current one.
@@ -67,6 +75,7 @@ YourBot: [3] "1 1 2 3 . . . 21" - written down by @NoScopeNick on [2026-10-27 / 
 - **Author:** [aaskjer on Twitch](https://twitch.tv/aaskjer) · [aaskjer.github.io](https://aaskjer.github.io/)
 - **Built for:** [Streamer.bot](https://streamer.bot) by [nate1280](https://www.patreon.com/c/nate1280/home)
 - **Works with:** [OBS Studio](https://obsproject.com) 28 or newer, as a browser source
+- **Settings window:** [UIFramework for streamer.bot](https://github.com/aaskjer/UIFramework-Streamer.bot)
 - **Data & services:** [Kick](https://kick.com): your channel's category, read from its public channel page when
   Twitch is not connected
 - **Thanks:** YOU ♡
